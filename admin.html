@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Zonfix — Planning</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,sans-serif;background:#1a1a2e;color:#fff;min-height:100vh}
+.header{background:#e67e22;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.header h1{font-size:1.2rem}.header .logo{font-weight:900}
+.tabs{display:flex;gap:8px;padding:12px 20px;background:#2d2d44}
+.tab{padding:8px 20px;border-radius:8px;cursor:pointer;background:#3d3d5c;border:none;color:#ccc;font-weight:600}
+.tab.active{background:#e67e22;color:#fff}
+.container{padding:20px;max-width:1000px;margin:0 auto}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:24px}
+.stat{background:#2d2d44;padding:20px;border-radius:12px}
+.stat h3{font-size:2rem;color:#f39c12}.stat p{font-size:.8rem;color:#999}
+table{width:100%;border-collapse:collapse;background:#2d2d44;border-radius:12px;overflow:hidden}
+th{background:#f39c12;color:#fff;padding:12px;text-align:left;font-size:.85rem}
+td{padding:12px;border-bottom:1px solid #3d3d5c;font-size:.9rem}
+.badge{padding:4px 10px;border-radius:12px;font-size:.75rem;font-weight:600}
+.badge-basis{background:#3498db;color:#fff}
+.badge-comfort{background:#f39c12;color:#fff}
+.badge-premium{background:#9b59b6;color:#fff}
+.no-data{text-align:center;padding:40px;color:#666}
+.add-btn{position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:#e67e22;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;color:#fff;text-decoration:none;box-shadow:0 4px 20px rgba(230,126,34,.4)}
+@media(max-width:600px){table{font-size:.75rem}th,td{padding:8px}}
+</style>
+</head>
+<body>
+<div class="header">
+<div class="logo">☀️ Zonfix <span style="opacity:.7">| Admin</span></div>
+<div>📞 06 57 07 92 76</div>
+</div>
+<div class="tabs">
+<button class="tab active" onclick="showTab('planning')">📅 Planning</button>
+<button class="tab" onclick="showTab('klanten')">👥 Klanten</button>
+<button class="tab" onclick="showTab('abonnementen')">💰 Abonnementen</button>
+</div>
+<div class="container" id="planning">
+<h2 style="margin-bottom:16px">📅 Planning Maart 2027</h2>
+<div class="stats">
+<div class="stat"><h3>0</h3><p>Abonnees totaal</p></div>
+<div class="stat"><h3>0</h3><p>Maart ingepland</p></div>
+<div class="stat"><h3>5</h3><p>Dagen per week</p></div>
+<div class="stat"><h3>€0</h3><p>Jaaromzet</p></div>
+</div>
+<table>
+<thead><tr><th>Datum</th><th>Klant</th><th>Adres</th><th>Abonnement</th><th>Panelen</th><th>Status</th></tr></thead>
+<tbody id="planning-body">
+<tr><td colspan="6" class="no-data">Nog geen klanten ingeschreven. Deel de inschrijflink!</td></tr>
+</tbody>
+</table>
+</div>
+<div class="container" id="klanten" style="display:none">
+<h2 style="margin-bottom:16px">👥 Klantenlijst</h2>
+<table>
+<thead><tr><th>Naam</th><th>Adres</th><th>Telefoon</th><th>Abonnement</th><th>Datum</th></tr></thead>
+<tbody>
+<tr><td colspan="5" class="no-data">Nog geen klanten. Zodra iemand inschrijft, verschijnt die hier.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="container" id="abonnementen" style="display:none">
+<h2 style="margin-bottom:16px">💰 Abonnementen Overzicht</h2>
+<table>
+<thead><tr><th>Type</th><th>Aantal</th><th>Prijs/jaar</th><th>Totaal</th></tr></thead>
+<tbody>
+<tr><td>☀️ Basis</td><td>0</td><td>€85</td><td>€0</td></tr>
+<tr><td>🌟 Comfort</td><td>0</td><td>€175</td><td>€0</td></tr>
+<tr><td>💎 Premium</td><td>0</td><td>€250</td><td>€0</td></tr>
+<tr style="font-weight:bold;background:#2d2d44"><td colspan="3">Totaal</td><td>€0</td></tr>
+</tbody>
+</table>
+</div>
+<a href="inschrijven.html" class="add-btn" title="Klant toevoegen">+</a>
+<script>
+function showTab(tabId) {
+document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+document.querySelectorAll('.container').forEach(c => c.style.display='none');
+document.getElementById(tabId).style.display='block';
+event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
