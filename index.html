@@ -3,92 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Zonfix — Zonnepanelen Reiniging Arnhem & Gelderland</title>
-<meta name="description" content="Zonfix: Professionele zonnepanelen reiniging in Arnhem en Gelderland. Osmose-water, geen chemicaliën. €85 voor 10 panelen. 1 bezoek per jaar.">
+<title>Zonfix — Professionele Zonnepanelen Reiniging | Arnhem & Gelderland</title>
+<meta name="description" content="Zonfix: Professionele zonnepanelen reiniging. Osmose-water, geen chemicaliën. €85 per jaar. Direct online betalen. Arnhem & Gelderland.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:system-ui,-apple-system,sans-serif;color:#1a1a2e;line-height:1.6}
-.container{max-width:900px;margin:0 auto;padding:0 20px}
-header{padding:20px 0;border-bottom:1px solid #eee}
-.header-inner{display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:2rem;font-weight:900;color:#f39c12}.logo span{color:#e67e22}
-.cta-btn{background:#e67e22;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}
-.hero{text-align:center;padding:80px 0 60px;background:linear-gradient(135deg,#f39c12,#e67e22);color:#fff}
-.hero h1{font-size:2.6rem;font-weight:900;margin-bottom:16px}
-.hero p{font-size:1.2rem;opacity:.95;margin-bottom:32px}
-.hero-cta{background:#fff;color:#e67e22;padding:16px 40px;border-radius:12px;text-decoration:none;font-weight:800;font-size:1.1rem}
-.stats{display:flex;justify-content:center;gap:40px;margin-top:30px}
-.stat h2{font-size:2rem}.stat p{font-size:.8rem;opacity:.8}
-.pricing{padding:60px 0;text-align:center}
-.pricing h2{font-size:2rem;margin-bottom:40px}
-.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;max-width:800px;margin:0 auto}
-.card{border:2px solid #eee;border-radius:16px;padding:32px 24px;text-align:center;transition:all .3s}
-.card:hover{border-color:#f39c12;box-shadow:0 8px 30px rgba(243,156,18,.15);transform:translateY(-4px)}
-.card.featured{border-color:#f39c12;background:#fff8f0}
-.card h3{font-size:1.4rem;margin-bottom:8px}
-.card .price{font-size:2.4rem;font-weight:900;color:#e67e22;margin:16px 0}
-.card .price small{font-size:1rem;color:#999}
-.card ul{list-style:none;text-align:left;margin:20px 0}
-.card li{padding:6px 0;border-bottom:1px solid #f5f5f5;font-size:.9rem}
-.card .btn{display:block;background:#e67e22;color:#fff;padding:14px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:16px}
-.card .btn.outline{background:#fff;color:#e67e22;border:2px solid #e67e22}
-.how{padding:60px 0;background:#fafafa}
-.how h2{text-align:center;font-size:2rem;margin-bottom:40px}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;max-width:800px;margin:0 auto}
-.step{text-align:center}
-.step-num{width:50px;height:50px;background:#f39c12;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:900;margin:0 auto 16px}
-.step h4{margin-bottom:8px}.step p{font-size:.85rem;color:#666}
-.contact{padding:60px 0;text-align:center}
-.contact h2{font-size:2rem;margin-bottom:16px}
-.contact a{font-size:1.3rem;color:#e67e22;text-decoration:none;font-weight:700}
-.straat{text-align:center;padding:16px;background:#f39c12;color:#fff;border-radius:12px;margin:20px 0 30px}
-footer{text-align:center;padding:30px;font-size:.8rem;color:#999;border-top:1px solid #eee}
-@media(max-width:600px){.hero h1{font-size:2rem}.stats{gap:20px}}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:#1a1a2e;line-height:1.6;background:#fafafa}
+.container{max-width:960px;margin:0 auto;padding:0 24px}
+/* Nav */
+nav{padding:16px 0;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:10}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.8rem;font-weight:900}
+.logo .zon{color:#f39c12}.logo .fix{color:#e67e22}
+.nav-cta{background:#e67e22;color:#fff;padding:10px 24px;border-radius:8px;text-decoration:none;font-weight:600;font-size:.9rem}
+/* Hero */
+.hero{padding:60px 0 40px;text-align:center;background:linear-gradient(180deg,#fff5e6 0%,#fff 100%)}
+.hero h1{font-size:2.8rem;font-weight:900;line-height:1.2;margin-bottom:12px}
+.hero h1 span{color:#e67e22}
+.hero p{font-size:1.2rem;color:#555;max-width:600px;margin:0 auto 24px}
+.trust{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:24px}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:.9rem;color:#666}
+.trust-item svg{color:#27ae60}
+/* Pricing */
+.pricing{padding:40px 0 60px}
+.pricing h2{text-align:center;font-size:2rem;margin-bottom:16px}
+.pricing-sub{text-align:center;color:#666;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:900px;margin:0 auto}
+.card{background:#fff;border-radius:16px;padding:36px 28px;box-shadow:0 2px 16px rgba(0,0,0,.06);border:1px solid #eee;text-align:center;transition:all .3s;position:relative}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 40px rgba(0,0,0,.1)}
+.card.featured{border:2px solid #f39c12;box-shadow:0 8px 32px rgba(243,156,18,.15)}
+.card.featured::before{content:'Best Value';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#f39c12;color:#fff;padding:4px 16px;border-radius:20px;font-size:.75rem;font-weight:700}
+.card .icon{font-size:2rem;margin-bottom:12px}
+.card h3{font-size:1.3rem;margin-bottom:4px}
+.card .desc{color:#666;font-size:.85rem;margin-bottom:20px}
+.card .price{font-size:2.6rem;font-weight:900;color:#e67e22;margin:8px 0}
+.card .price small{font-size:.9rem;color:#999;font-weight:400}
+.card ul{list-style:none;text-align:left;margin:24px 0}
+.card li{font-size:.9rem;padding:8px 0;border-bottom:1px solid #f5f5f5;display:flex;align-items:center;gap:8px}
+.card li::before{content:'✓';color:#27ae60;font-weight:bold}
+.card .btn{display:block;padding:14px;border-radius:10px;text-decoration:none;font-weight:700;font-size:1rem;margin-top:8px}
+.btn-primary{background:#e67e22;color:#fff}
+.btn-primary:hover{background:#d35400}
+.btn-outline{background:#fff;color:#e67e22;border:2px solid #e67e22}
+/* Flow */
+.flow{padding:50px 0;background:#fff;text-align:center}
+.flow h2{font-size:1.8rem;margin-bottom:40px}
+.steps{display:flex;gap:20px;max-width:900px;margin:0 auto;justify-content:center;flex-wrap:wrap}
+.step{flex:1;min-width:180px;max-width:220px}
+.step-num{width:56px;height:56px;background:#f39c12;color:#fff;border-radius:50%;font-size:1.6rem;font-weight:900;margin:0 auto 12px;display:flex;align-items:center;justify-content:center}
+.step h4{font-size:1rem;margin-bottom:4px}.step p{font-size:.8rem;color:#666}
+/* Betaling modal */
+.pay-now{text-align:center;padding:40px 0}
+.pay-now h3{font-size:1.3rem;margin-bottom:8px}
+.pay-now .btn-large{display:inline-block;background:#e67e22;color:#fff;padding:16px 48px;border-radius:12px;font-size:1.2rem;font-weight:700;text-decoration:none;margin-top:12px}
+/* Footer */
+footer{text-align:center;padding:40px 24px;background:#1a1a2e;color:#999;font-size:.8rem}
+footer a{color:#f39c12;text-decoration:none}
+/* Straat banner */
+.banner{background:#f39c12;color:#fff;text-align:center;padding:14px;font-weight:600;border-radius:12px;margin-bottom:30px;font-size:1rem}
+.banner strong{font-size:1.2rem}
+@media(max-width:768px){.hero h1{font-size:2rem}.grid{grid-template-columns:1fr}}
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-<div class="container header-inner">
-<div class="logo">☀️ Zon<span>fix</span></div>
-<a href="https://wa.me/31657079276" class="cta-btn">📞 06 57 07 92 76</a>
+<nav>
+<div class="container nav-inner">
+<div class="logo"><span class="zon">☀️ Zon</span><span class="fix">fix</span></div>
+<a href="#abonnementen" class="nav-cta">Bekijk abonnementen</a>
 </div>
-</header>
+</nav>
 
 <section class="hero">
 <div class="container">
-<h1>Uw zonnepanelen weer als nieuw</h1>
-<p>Professionele osmose-reiniging. Geen chemicaliën. In 1 uur klaar.</p>
-<a href="https://wa.me/31657079276" class="hero-cta">📋 Vrijblijvende offerte</a>
-<div class="stats">
-<div class="stat"><h2>25%</h2><p>Meer opbrengst</p></div>
-<div class="stat"><h2>1u</h2><p>Per huis</p></div>
-<div class="stat"><h2>1×</h2><p>Per jaar</p></div>
+<h1>Zonnepanelen weer <span>als nieuw</span></h1>
+<p>Professionele osmose-reiniging zonder chemicaliën. Eén bezoek per jaar. Direct online betalen.</p>
+<div class="trust">
+<div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> VCA gecertificeerd</div>
+<div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> 8+ jaar ervaring</div>
+<div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> 100% osmose-water</div>
 </div>
 </div>
 </section>
 
-<section class="pricing">
+<section class="pricing" id="abonnementen">
 <div class="container">
-<h2>Onze abonnementen</h2>
-<div class="straat">🔥 <strong>3 huizen in dezelfde straat = €450 totaal!</strong></div>
-<div class="pricing-grid">
-<div class="card"><h3>☀️ Basis</h3><p>Zonnepanelen reiniging</p><div class="price">€85<small>/jaar</small></div><ul><li>✅ Osmose-reiniging</li><li>✅ 10 panelen</li><li>✅ 1 bezoek per jaar</li><li>✅ Maart-april</li></ul><a href="https://wa.me/31657079276?text=Ik%20wil%20het%20Basis%20abonnement%20(€85/jr)%20bij%20Zonfix" class="btn">Inschrijven →</a></div>
-<div class="card featured"><h3>🌟 Comfort</h3><p>Panelen + Dakgoot</p><div class="price">€175<small>/jaar</small></div><ul><li>✅ Alles van Basis</li><li>✅ Dakgoot reiniging</li><li>✅ 1 bezoek — alles tegelijk</li><li>✅ 10-20 panelen</li></ul><a href="https://wa.me/31657079276?text=Ik%20wil%20het%20Comfort%20abonnement%20(€175/jr)%20bij%20Zonfix" class="btn">Inschrijven →</a></div>
-<div class="card"><h3>💎 Premium</h3><p>Alles + Spoed</p><div class="price">€250<small>/jaar</small></div><ul><li>✅ Alles van Comfort</li><li>✅ 48u spoedservice</li><li>✅ Voorrang inplannen</li><li>✅ 10-20 panelen</li></ul><a href="https://wa.me/31657079276?text=Ik%20wil%20het%20Premium%20abonnement%20(€250/jr)%20bij%20Zonfix" class="btn outline">Inschrijven →</a></div>
+<h2>Kies uw abonnement</h2>
+<p class="pricing-sub">Alles in 1 bezoek per jaar. Maart-april uitvoering.</p>
+<div class="banner">🔥 <strong>3 huizen in dezelfde straat = €450 totaal!</strong></div>
+<div class="grid">
+<div class="card">
+<div class="icon">☀️</div><h3>Basis</h3><p class="desc">Zonnepanelen reiniging</p>
+<div class="price">€85<small>/jaar</small></div>
+<ul><li>Osmose-reiniging</li><li>Tot 10 panelen</li><li>1 bezoek per jaar</li><li>Uitvoering maart-april</li></ul>
+<a href="https://wa.me/31657079276?text=Ik%20wil%20het%20Basis%20abonnement%20(€85/jr)%20bij%20Zonfix" class="btn btn-outline">Inschrijven via WhatsApp</a>
+</div>
+
+<div class="card featured">
+<div class="icon">🌟</div><h3>Comfort</h3><p class="desc">Panelen + Dakgoot</p>
+<div class="price">€175<small>/jaar</small></div>
+<ul><li>Alles van Basis</li><li>Dakgoot reiniging</li><li>Tot 20 panelen</li><li>Alles in 1 bezoek</li></ul>
+<a href="https://wa.me/31657079276?text=Ik%20wil%20het%20Comfort%20abonnement%20(€175/jr)%20bij%20Zonfix" class="btn btn-primary">Inschrijven via WhatsApp</a>
+</div>
+
+<div class="card">
+<div class="icon">💎</div><h3>Premium</h3><p class="desc">Alles + Spoedservice</p>
+<div class="price">€250<small>/jaar</small></div>
+<ul><li>Alles van Comfort</li><li>48 uur spoedservice</li><li>Voorrang bij inplannen</li><li>Tot 20 panelen</li></ul>
+<a href="https://wa.me/31657079276?text=Ik%20wil%20het%20Premium%20abonnement%20(€250/jr)%20bij%20Zonfix" class="btn btn-outline">Inschrijven via WhatsApp</a>
+</div>
 </div>
 </div>
 </section>
 
-<section class="how"><div class="container"><h2>Hoe werkt het?</h2><div class="steps">
-<div class="step"><div class="step-num">1</div><h4>Inschrijven</h4><p>Kies je abonnement via WhatsApp</p></div>
-<div class="step"><div class="step-num">2</div><h4>Factuur</h4><p>Je ontvangt de factuur met betaallink</p></div>
-<div class="step"><div class="step-num">3</div><h4>Inplannen</h4><p>Wij plannen in maart bij je in</p></div>
-<div class="step"><div class="step-num">4</div><h4>Schitteren</h4><p>1 bezoek, panelen als nieuw!</p></div>
-</div></div></section>
+<section class="flow">
+<div class="container">
+<h2>Zo werkt het</h2>
+<div class="steps">
+<div class="step"><div class="step-num">1</div><h4>Kies</h4><p>Klik op uw abonnement</p></div>
+<div class="step"><div class="step-num">2</div><h4>App</h4><p>WhatsApp opent automatisch</p></div>
+<div class="step"><div class="step-num">3</div><h4>Betaal</h4><p>U ontvangt direct de factuur</p></div>
+<div class="step"><div class="step-num">4</div><h4>Klaar</h4><p>Wij komen in maart bij u langs</p></div>
+</div>
+</div>
+</section>
 
-<section class="contact"><div class="container"><h2>Klaar voor schone panelen?</h2><p>Bel of app direct:</p><a href="https://wa.me/31657079276">📞 06 57 07 92 76</a><p style="margin-top:8px;color:#666">📧 info@zonfix.nl</p></div></section>
+<section class="pay-now">
+<div class="container">
+<h3>Liever direct betalen?</h3>
+<p style="color:#666;margin-bottom:8px">Scan de QR-code of klik hieronder</p>
+<a href="#" class="btn-large">💳 Direct betalen met iDEAL</a>
+</div>
+</section>
 
-<footer><div class="container"><p>Zonfix — Zonnepanelen Reiniging Arnhem & Gelderland | KVK 90090330</p></div></footer>
+<footer>
+<div class="container">
+<p><strong>Zonfix</strong> — Zonnepanelen Reiniging Arnhem & Gelderland</p>
+<p>📞 <a href="tel:+31657079276">06 57 07 92 76</a> | 📧 <a href="mailto:info@zonfix.nl">info@zonfix.nl</a></p>
+<p>KVK 90090330 | Leeuwenstein 64, 6824 DA Arnhem</p>
+<p style="margin-top:12px;opacity:.6">&copy; 2026 Zonfix. Alle rechten voorbehouden.</p>
+</div>
+</footer>
+
 </body>
 </html>
